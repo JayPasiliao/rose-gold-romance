@@ -48,7 +48,7 @@ const Hero = () => {
               <div className="h-px bg-white/30 flex-1 max-w-20"></div>
             </div>
             <h1 className="text-6xl md:text-8xl text-cursive text-white animate-slide-in-right">
-              Juanito Jr.
+              Jay
             </h1>
             <p className="text-xl text-white/80 mt-6 font-playfair">
               are getting married

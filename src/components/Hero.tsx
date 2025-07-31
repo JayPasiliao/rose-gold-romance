@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Heart, Calendar, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import weddingLogo from '@/assets/cj-wedding-logo.png';
+import AnimatedText from './AnimatedText';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -42,8 +43,18 @@ const Hero = () => {
           {/* Names */}
           <div className="mb-12">
             <h1 className="text-6xl md:text-8xl text-cursive text-white mb-4">
-              <span className="inline-block animate-flip-in" style={{ animationDelay: '0.2s' }}>Christine</span>
-              <span className="inline-block ml-4 animate-flip-in" style={{ animationDelay: '0.4s' }}>Joyce</span>
+              <AnimatedText 
+                text="Christine" 
+                className="inline-block" 
+                animationDelay={0.2} 
+                animationDuration={0.08}
+              />
+              <AnimatedText 
+                text=" Joyce" 
+                className="inline-block ml-4" 
+                animationDelay={0.4} 
+                animationDuration={0.08}
+              />
             </h1>
             <div className="flex items-center justify-center mb-4">
               <div className="h-px bg-white/30 flex-1 max-w-20"></div>
@@ -51,7 +62,12 @@ const Hero = () => {
               <div className="h-px bg-white/30 flex-1 max-w-20"></div>
             </div>
             <h1 className="text-6xl md:text-8xl text-cursive text-white">
-              <span className="inline-block animate-flip-in" style={{ animationDelay: '0.6s' }}>Jay</span>
+              <AnimatedText 
+                text="Jay" 
+                className="inline-block" 
+                animationDelay={0.6} 
+                animationDuration={0.1}
+              />
             </h1>
             <p className="text-xl text-white/80 mt-6 font-playfair animate-fade-in" style={{ animationDelay: '0.8s' }}>
               are getting married

@@ -13,8 +13,7 @@ const WeddingParty = () => {
     },
     bride: {
       father: 'Eli Bentinganan',
-      mother: 'Josephine Chua',
-      stepfather: 'Rocky Lawagan'
+      mother: 'Josephine Chua'
     }
   };
 
@@ -78,7 +77,7 @@ const WeddingParty = () => {
     { name: 'Kristhel Brioso', role: '' },
     { name: 'Nicole Manuel', role: '' },
     { name: 'Angelica Marcelino', role: '' },
-    { name: 'Angelica Naguita', role: '' },
+    { name: 'Angelica Naguit', role: '' },
     { name: 'Anne Marie Estepa', role: '' }
   ];
 
@@ -89,7 +88,7 @@ const WeddingParty = () => {
     { name: 'Kristoff John Santiago', role: '' },
     { name: 'Daryl Tabios', role: '' },
     { name: 'Miguel Marco Velarde', role: '' },
-    { name: 'Arron Gabrielle Velarde', role: '' },
+    { name: 'Aaron Gabrielle Velarde', role: '' },
     { name: 'Manuelito Sortejas', role: '' },
     { name: 'Jek Gilbert Brioso', role: '' },
     { name: 'Richard Beltran', role: '' },
@@ -116,55 +115,55 @@ const WeddingParty = () => {
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
-            <TabsList className="glass p-2 h-auto">
+            <TabsList className="glass-tabs p-2 h-auto backdrop-blur-xl bg-white/15 border border-white/20 shadow-xl">
               <TabsTrigger 
                 value="parents" 
-                className="w-full data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white py-3"
+                className="w-full data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white data-[state=active]:shadow-lg py-3 transition-all duration-300 hover:bg-white/20 text-foreground font-medium"
               >
                 <Heart className="mr-2" size={20} />
                 Parents
               </TabsTrigger>
             </TabsList>
-            <TabsList className="glass p-2 h-auto">
+            <TabsList className="glass-tabs p-2 h-auto backdrop-blur-xl bg-white/15 border border-white/20 shadow-xl">
               <TabsTrigger 
                 value="bearers" 
-                className="w-full data-[state=active]:bg-gradient-gold data-[state=active]:text-white py-3"
+                className="w-full data-[state=active]:bg-gradient-gold data-[state=active]:text-white data-[state=active]:shadow-lg py-3 transition-all duration-300 hover:bg-white/20 text-foreground font-medium"
               >
                 <Baby className="mr-2" size={20} />
                 Bearers
               </TabsTrigger>
             </TabsList>
-            <TabsList className="glass p-2 h-auto">
+            <TabsList className="glass-tabs p-2 h-auto backdrop-blur-xl bg-white/15 border border-white/20 shadow-xl">
               <TabsTrigger 
                 value="sponsors" 
-                className="w-full data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white py-3"
+                className="w-full data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white data-[state=active]:shadow-lg py-3 transition-all duration-300 hover:bg-white/20 text-foreground font-medium"
               >
                 <Users className="mr-2" size={20} />
                 Principal
               </TabsTrigger>
             </TabsList>
-            <TabsList className="glass p-2 h-auto">
+            <TabsList className="glass-tabs p-2 h-auto backdrop-blur-xl bg-white/15 border border-white/20 shadow-xl">
               <TabsTrigger 
                 value="secondary" 
-                className="w-full data-[state=active]:bg-gradient-gold data-[state=active]:text-white py-3"
+                className="w-full data-[state=active]:bg-gradient-gold data-[state=active]:text-white data-[state=active]:shadow-lg py-3 transition-all duration-300 hover:bg-white/20 text-foreground font-medium"
               >
                 <Crown className="mr-2" size={20} />
                 Secondary
               </TabsTrigger>
             </TabsList>
-            <TabsList className="glass p-2 h-auto">
+            <TabsList className="glass-tabs p-2 h-auto backdrop-blur-xl bg-white/15 border border-white/20 shadow-xl">
               <TabsTrigger 
                 value="bridesmaids" 
-                className="w-full data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white py-3"
+                className="w-full data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white data-[state=active]:shadow-lg py-3 transition-all duration-300 hover:bg-white/20 text-foreground font-medium"
               >
                 <Flower className="mr-2" size={20} />
                 Bridesmaids
               </TabsTrigger>
             </TabsList>
-            <TabsList className="glass p-2 h-auto">
+            <TabsList className="glass-tabs p-2 h-auto backdrop-blur-xl bg-white/15 border border-white/20 shadow-xl">
               <TabsTrigger 
                 value="groomsmen" 
-                className="w-full data-[state=active]:bg-gradient-gold data-[state=active]:text-white py-3"
+                className="w-full data-[state=active]:bg-gradient-gold data-[state=active]:text-white data-[state=active]:shadow-lg py-3 transition-all duration-300 hover:bg-white/20 text-foreground font-medium"
               >
                 <Heart className="mr-2" size={20} />
                 Groomsmen
@@ -213,10 +212,6 @@ const WeddingParty = () => {
                     <div>
                       <p className="text-sm text-muted-foreground">Mother</p>
                       <p className="font-medium text-foreground text-lg">{parents.bride.mother}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">Stepfather</p>
-                      <p className="font-medium text-foreground text-lg">{parents.bride.stepfather}</p>
                     </div>
                   </div>
                 </CardContent>

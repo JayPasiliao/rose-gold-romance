@@ -115,50 +115,62 @@ const WeddingParty = () => {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-6 glass mb-12 p-2 h-auto">
-            <TabsTrigger 
-              value="parents" 
-              className="data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white py-3"
-            >
-              <Heart className="mr-2" size={20} />
-              Parents
-            </TabsTrigger>
-            <TabsTrigger 
-              value="bearers" 
-              className="data-[state=active]:bg-gradient-gold data-[state=active]:text-white py-3"
-            >
-              <Baby className="mr-2" size={20} />
-              Bearers
-            </TabsTrigger>
-            <TabsTrigger 
-              value="sponsors" 
-              className="data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white py-3"
-            >
-              <Users className="mr-2" size={20} />
-              Principal Sponsors
-            </TabsTrigger>
-            <TabsTrigger 
-              value="secondary" 
-              className="data-[state=active]:bg-gradient-gold data-[state=active]:text-white py-3"
-            >
-              <Crown className="mr-2" size={20} />
-              Secondary Sponsors
-            </TabsTrigger>
-            <TabsTrigger 
-              value="bridesmaids" 
-              className="data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white py-3"
-            >
-              <Flower className="mr-2" size={20} />
-              Bridesmaids
-            </TabsTrigger>
-            <TabsTrigger 
-              value="groomsmen" 
-              className="data-[state=active]:bg-gradient-gold data-[state=active]:text-white py-3"
-            >
-              <Heart className="mr-2" size={20} />
-              Groomsmen
-            </TabsTrigger>
-          </TabsList>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+            <TabsList className="glass p-2 h-auto">
+              <TabsTrigger 
+                value="parents" 
+                className="w-full data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white py-3"
+              >
+                <Heart className="mr-2" size={20} />
+                Parents
+              </TabsTrigger>
+            </TabsList>
+            <TabsList className="glass p-2 h-auto">
+              <TabsTrigger 
+                value="bearers" 
+                className="w-full data-[state=active]:bg-gradient-gold data-[state=active]:text-white py-3"
+              >
+                <Baby className="mr-2" size={20} />
+                Bearers
+              </TabsTrigger>
+            </TabsList>
+            <TabsList className="glass p-2 h-auto">
+              <TabsTrigger 
+                value="sponsors" 
+                className="w-full data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white py-3"
+              >
+                <Users className="mr-2" size={20} />
+                Principal
+              </TabsTrigger>
+            </TabsList>
+            <TabsList className="glass p-2 h-auto">
+              <TabsTrigger 
+                value="secondary" 
+                className="w-full data-[state=active]:bg-gradient-gold data-[state=active]:text-white py-3"
+              >
+                <Crown className="mr-2" size={20} />
+                Secondary
+              </TabsTrigger>
+            </TabsList>
+            <TabsList className="glass p-2 h-auto">
+              <TabsTrigger 
+                value="bridesmaids" 
+                className="w-full data-[state=active]:bg-gradient-rose-gold data-[state=active]:text-white py-3"
+              >
+                <Flower className="mr-2" size={20} />
+                Bridesmaids
+              </TabsTrigger>
+            </TabsList>
+            <TabsList className="glass p-2 h-auto">
+              <TabsTrigger 
+                value="groomsmen" 
+                className="w-full data-[state=active]:bg-gradient-gold data-[state=active]:text-white py-3"
+              >
+                <Heart className="mr-2" size={20} />
+                Groomsmen
+              </TabsTrigger>
+            </TabsList>
+          </div>
 
           <TabsContent value="parents" className="animate-fade-in-up">
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

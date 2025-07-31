@@ -9,11 +9,21 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
-      <WeddingDetails />
-      <WeddingParty />
-      <ContactRSVP />
-      <Footer />
+      <div className="transition-all duration-700 ease-in-out">
+        <Hero />
+      </div>
+      <div className="transition-all duration-700 ease-in-out">
+        <WeddingDetails />
+      </div>
+      <div className="transition-all duration-700 ease-in-out">
+        <WeddingParty />
+      </div>
+      <div className="transition-all duration-700 ease-in-out">
+        <ContactRSVP />
+      </div>
+      <div className="transition-all duration-700 ease-in-out">
+        <Footer />
+      </div>
     </div>
   );
 };

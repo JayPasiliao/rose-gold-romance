@@ -30,11 +30,13 @@ const Hero = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Logo */}
           <div className="mb-8 animate-fade-in-up">
-            <img 
-              src={weddingLogo} 
-              alt="C&J Wedding Logo" 
-              className="w-32 h-32 mx-auto mb-6 hover-glow transition-all duration-300"
-            />
+            <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-white/10 backdrop-blur-sm shadow-elegant hover-glow transition-all duration-300 flex items-center justify-center">
+              <img 
+                src={weddingLogo} 
+                alt="C&J Wedding Logo" 
+                className="w-36 h-36 object-contain"
+              />
+            </div>
           </div>
 
           {/* Names */}

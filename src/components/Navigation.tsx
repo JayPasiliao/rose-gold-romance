@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Heart, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import weddingLogo from '@/assets/cj-wedding-logo.png';
+import logoHeading from '@/assets/logo-heading.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,13 +43,10 @@ const Navigation = () => {
           {/* Logo */}
           <button onClick={scrollToTop} className="flex items-center gap-3 hover-glow transition-all duration-300">
             <img 
-              src={weddingLogo} 
-              alt="C&J Wedding Logo" 
-              className="w-10 h-10"
+              src={logoHeading} 
+              alt="Wedding Logo Heading" 
+              className="w-16 h-8 object-contain"
             />
-            <div className="hidden sm:block">
-              <span className="text-cursive text-xl text-white">C&J</span>
-            </div>
           </button>
 
           {/* Desktop Navigation */}
@@ -58,7 +55,7 @@ const Navigation = () => {
               <button
                 key={item.label}
                 onClick={item.action}
-                className="text-white hover:text-gold transition-colors duration-300 font-medium"
+                className="text-gray-800 hover:text-gold transition-colors duration-300 font-medium"
               >
                 {item.label}
               </button>
@@ -68,7 +65,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white hover:text-gold transition-colors duration-300"
+            className="md:hidden text-gray-800 hover:text-gold transition-colors duration-300"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -83,7 +80,7 @@ const Navigation = () => {
               <button
                 key={item.label}
                 onClick={item.action}
-                className="block w-full text-left text-white hover:text-gold transition-colors duration-300 font-medium py-2"
+                className="block w-full text-left text-gray-800 hover:text-gold transition-colors duration-300 font-medium py-2"
               >
                 {item.label}
               </button>

@@ -6,6 +6,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;600;700&display=swap');
 
+@font-face {
+  font-family: 'Lucy Said Ok';
+  src: url('./assets/lucy-said-ok.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   :root {
     /* Rose Gold & Gold Color Palette */
@@ -176,6 +183,52 @@
     font-family: 'Playfair Display', serif;
   }
 
+  .text-lucy {
+    font-family: 'Lucy Said Ok', cursive;
+  }
+
+  .text-gold {
+    font-family: 'Lucy Said Ok', cursive;
+    color: #e7d1c5;
+    font-size: 200px;
+    line-height: 0.9;
+    animation: text-flip 6s ease-in-out infinite;
+  }
+
+  @keyframes text-flip {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    15% {
+      transform: perspective(1000px) rotateY(180deg);
+    }
+    25% {
+      transform: perspective(1000px) rotateY(180deg);
+    }
+    40% {
+      transform: perspective(1000px) rotateY(360deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(360deg);
+    }
+  }
+
+  .text-shine-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .text-shine-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: shine-sweep 2s ease-in-out infinite;
+  }
+
   /* Animations */
   .animate-float {
     animation: float 6s ease-in-out infinite;
@@ -210,6 +263,18 @@
   .animate-flip-rotate-delayed {
     animation: flip-rotate 1.2s ease-out forwards;
     opacity: 0;
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 10s linear infinite;
+  }
+
+  .animate-shine {
+    animation: shine 3s ease-in-out infinite;
+  }
+
+  .animate-rose-gold-bg {
+    animation: rose-gold-bg 8s ease-in-out infinite;
   }
 
   /* Hover Effects */
@@ -319,3 +384,148 @@
     transform: translateX(0);
   }
 }
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(54deg);
+  }
+  25% {
+    transform: rotate(54deg);
+  }
+  40% {
+    transform: rotate(108deg);
+  }
+  50% {
+    transform: rotate(108deg);
+  }
+  65% {
+    transform: rotate(162deg);
+  }
+  75% {
+    transform: rotate(162deg);
+  }
+  90% {
+    transform: rotate(216deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  50% {
+    transform: translateX(100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-12deg);
+  }
+}
+
+@keyframes rose-gold-bg {
+  0% {
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    opacity: 0.5;
+    transform: scale(1.05) rotate(1deg);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.1) rotate(0deg);
+  }
+  75% {
+    opacity: 0.6;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes stroke-follow {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  25% {
+    clip-path: polygon(0 0, 25% 0, 25% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  }
+  75% {
+    clip-path: polygon(0 0, 75% 0, 75% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+  @keyframes shine-sweep {
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  /* Falling Petals Animation */
+  .falling-petal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #FFB6C1, #FFC0CB, #FFE4E1);
+    border-radius: 50% 0 50% 50%;
+    animation: falling-petal 8s linear infinite;
+    opacity: 0.8;
+    z-index: 1;
+  }
+
+  .falling-petal:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .falling-petal:nth-child(2) { left: 20%; animation-delay: 1s; }
+  .falling-petal:nth-child(3) { left: 30%; animation-delay: 2s; }
+  .falling-petal:nth-child(4) { left: 40%; animation-delay: 3s; }
+  .falling-petal:nth-child(5) { left: 50%; animation-delay: 4s; }
+  .falling-petal:nth-child(6) { left: 60%; animation-delay: 5s; }
+  .falling-petal:nth-child(7) { left: 70%; animation-delay: 6s; }
+  .falling-petal:nth-child(8) { left: 80%; animation-delay: 7s; }
+  .falling-petal:nth-child(9) { left: 90%; animation-delay: 0.5s; }
+  .falling-petal:nth-child(10) { left: 15%; animation-delay: 1.5s; }
+  .falling-petal:nth-child(11) { left: 25%; animation-delay: 2.5s; }
+  .falling-petal:nth-child(12) { left: 35%; animation-delay: 3.5s; }
+  .falling-petal:nth-child(13) { left: 45%; animation-delay: 4.5s; }
+  .falling-petal:nth-child(14) { left: 55%; animation-delay: 5.5s; }
+  .falling-petal:nth-child(15) { left: 65%; animation-delay: 6.5s; }
+  .falling-petal:nth-child(16) { left: 75%; animation-delay: 7.5s; }
+  .falling-petal:nth-child(17) { left: 85%; animation-delay: 0.25s; }
+  .falling-petal:nth-child(18) { left: 95%; animation-delay: 1.25s; }
+  .falling-petal:nth-child(19) { left: 5%; animation-delay: 2.25s; }
+  .falling-petal:nth-child(20) { left: 45%; animation-delay: 3.25s; }
+
+  @keyframes falling-petal {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }

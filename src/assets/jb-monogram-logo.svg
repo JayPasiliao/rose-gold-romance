@@ -1,0 +1,50 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with decorative border -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="beigeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F5DC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8DCC4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circle background -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#F5F5DC" stroke-width="2"/>
+  
+  <!-- Decorative dashed line on left side -->
+  <path d="M 100 5 A 95 95 0 0 0 100 195" fill="none" stroke="#F5F5DC" stroke-width="1" stroke-dasharray="3,3"/>
+  
+  <!-- Floral decorative elements on right side -->
+  <g stroke="#F5F5DC" stroke-width="1" fill="none">
+    <!-- Upper floral branch -->
+    <path d="M 105 20 Q 120 15 130 25 Q 125 35 115 30" />
+    <path d="M 115 30 Q 125 25 135 35" />
+    <circle cx="130" cy="25" r="2" fill="#F5F5DC"/>
+    <circle cx="135" cy="35" r="1.5" fill="#F5F5DC"/>
+    
+    <!-- Lower floral branch -->
+    <path d="M 105 180 Q 120 185 130 175 Q 125 165 115 170" />
+    <path d="M 115 170 Q 125 175 135 165" />
+    <circle cx="130" cy="175" r="2" fill="#F5F5DC"/>
+    <circle cx="135" cy="165" r="1.5" fill="#F5F5DC"/>
+  </g>
+  
+  <!-- Large J in gold -->
+  <path d="M 70 40 L 70 120 Q 70 140 90 140 L 110 140" 
+        stroke="url(#goldGradient)" 
+        stroke-width="8" 
+        fill="none" 
+        stroke-linecap="round"
+        opacity="0.8"/>
+  
+  <!-- Large B in beige/pink overlapping J -->
+  <path d="M 60 30 Q 60 50 80 50 Q 100 50 100 70 Q 100 90 80 90 Q 60 90 60 110 Q 60 130 80 130 Q 100 130 100 150 L 100 170" 
+        stroke="url(#beigeGradient)" 
+        stroke-width="10" 
+        fill="none" 
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg> 
